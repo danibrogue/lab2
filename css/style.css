@@ -1,0 +1,220 @@
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-500 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/montserrat-v15-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v15-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-900 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+       url('../fonts/montserrat-v15-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v15-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* . Уменьшает саму картинку чтобы она не выходила за заданные пределы 200х100 когда используются падинги(расстояние между пикселями?)*/
+html{
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+body{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #000000;
+}
+.wrapper{
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.header{
+    background-color: #C20000;/**/
+    position: fixed;/*это и ниже нужно для прявязки к верхней части экрана header(всегда был виден)*/
+    top: 0;/*позиция в верхней части*/
+    left: 0;/*позиция в левой части привязка*/
+    width: 100%;/*занимает 100% экрана*/
+}
+.header_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 15px ;
+}
+.header_list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.header_item{
+    margin-right: 30px;/* отступ между элементами*/
+}
+.header_item:last-child{/*Изменение у поседнего элемента*/
+    margin-right: 15px;
+}
+.header_link{
+    font-size: 22px;
+    line-height: 29px;
+    color: #000000;
+    text-decoration: none;
+}
+.header_link:hover, .header_link:focus, .header_link:active{
+    color: cornsilk;
+}
+.header_text{
+    font-size: 22px;
+    line-height: 29px;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Основное окно*/
+
+.main{
+    height: 100vh;
+}
+.imageBlock{
+    padding-top: 60px;
+    /*margin-right: 30px;не работает. Надо сделать общий класс для данного элемента чтобы работало*/
+}
+.photo_list{
+    display:flex;
+    flex-wrap: wrap;
+}
+.photo_item{
+    margin-right: 20px;
+}
+.photo_item:nth-child(4n){/*Изменение у каждого 4 элемента*/
+    margin-right: 0px;
+}
+.photo_info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.infoPhoto{
+    font-size: 15px;
+    line-height: 15px;
+    color: #000000;
+    text-decoration: none;
+}
+.аuthor_link{
+    font-size: 15px;
+    line-height: 15px;
+    color: #000000;
+    text-decoration: none;
+}
+.аuthor_link:hover, .аuthor_link:focus{
+    color: blue;
+}
+.AuthBlock{
+    max-width: 203px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #000000;
+
+}
+.WarningText{
+    font-size: 20px;
+    line-height: 20px;
+    color: red;
+    text-align: center;
+}
+.GreenText{
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: green;
+}
+.InfoUser{
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+.addPhotoLink{
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+    color: orangered;
+}
+.addPhotoLink:hover, .header_link:focus, .header_link:active{
+    color: blue;
+}
+.UserList{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 15px ;
+}
+.TextInfo{
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+.ItemInfo:last-child{
+    text-align: right;
+}
+.imageUserBlock{
+    padding-top: 10px;
+    /*margin-right: 30px;не работает. Надо сделать общий класс для данного элемента чтобы работало*/
+}
+.Send_list{
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    /*max-width: 203px;*/
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.Thumbnail{
+    font-weight: bold;
+}
+p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #000000;
+}
+/*.item{
+  width: 200px;
+  height: 100px;
+  background-color: green;
+  padding: 20px;
+} ((Необходимо было для изучения работы))
+*/
